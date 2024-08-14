@@ -27,3 +27,5 @@ hardware/**/*.xml
 hardware/**/*.csv
 
 hardware/Template-KiCAD-Project-CI-backups/
+
+*.zip
