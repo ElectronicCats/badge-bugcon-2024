@@ -1,32 +1,152 @@
-(footprint "LYT77K-K2M1" (version 20221018) (generator pcbnew)
-  (layer "F.Cu")
-  (property "Sheetfile" "Badge-pwnCon.kicad_sch")
-  (property "Sheetname" "")
-  (property "manf#" "AA3528ZGCKT09")
-  (attr smd)
-  (fp_text reference "D5" (at -0.43011 -2.5356) (layer "F.SilkS")
-      (effects (font (size 1 1) (thickness 0.15)))
-    (tstamp f58d361c-a6f8-4338-953a-78191ba7073b)
-  )
-  (fp_text value "R_LED" (at -0.12503 2.56545) (layer "F.Fab") hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    (tstamp 0fd2fb6c-2f56-4509-a69e-4a7f286e6fab)
-  )
-  (fp_line (start -1.7 -1.5) (end 1.7 -1.5)
-    (stroke (width 0.127) (type solid)) (layer "F.SilkS") (tstamp 23d4ec3f-b359-4121-86ce-37e50b22a490))
-  (fp_line (start -1.7 1.5) (end -1.7 -1.5)
-    (stroke (width 0.127) (type solid)) (layer "F.SilkS") (tstamp 49fcb96d-6234-4b17-8f89-e894dfc3437a))
-  (fp_line (start 1.7 -1.5) (end 1.7 1.5)
-    (stroke (width 0.127) (type solid)) (layer "F.SilkS") (tstamp ab1d4d5f-c304-4322-a901-a39f67dca4d0))
-  (fp_line (start 1.7 1.5) (end -1.7 1.5)
-    (stroke (width 0.127) (type solid)) (layer "F.SilkS") (tstamp 647b0524-e470-4700-ad65-c8334aa4be19))
-  (fp_circle (center 5.2 0) (end 5.32 0)
-    (stroke (width 0.24) (type solid)) (fill none) (layer "F.SilkS") (tstamp 8dbaae0e-2da3-4ef0-9902-82f65abd55ff))
-  (pad "1" smd rect (at -2.5 0) (size 1.4 2.6) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp d58ab57b-6fb8-4d32-9f1a-b042d03560a7))
-  (pad "2" smd rect (at 2.5 0) (size 1.4 2.6) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp 892c1aaa-1722-49bd-87b1-97ec3b6a6f88))
-  (model "${KIPRJMOD}/badge_pwnCon.pretty/3D/LYT77K-K2M1.step"
-    (offset (xyz 0 0 1.1))
-    (scale (xyz 1 1 1))
-    (rotate (xyz -90 0 0))
-  )
+(footprint "LYT77K-K2M1"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "D5"
+		(at -0.43011 -2.5356 0)
+		(layer "F.SilkS")
+		(uuid "f58d361c-a6f8-4338-953a-78191ba7073b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "R_LED"
+		(at -0.12503 2.56545 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0fd2fb6c-2f56-4509-a69e-4a7f286e6fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "17632419-9858-40d5-a957-b4404126480e")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "aff56f4b-52fa-48d5-8c20-ebbff826ee5e")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "11992b73-ef06-4d39-8ec8-9e0d7076bfe0")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "manf#" "AA3528ZGCKT09"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "35182c33-62bd-4de7-b9f6-95e6031a57ef")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -1.7 -1.5)
+		(end 1.7 -1.5)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "23d4ec3f-b359-4121-86ce-37e50b22a490")
+	)
+	(fp_line
+		(start -1.7 1.5)
+		(end -1.7 -1.5)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "49fcb96d-6234-4b17-8f89-e894dfc3437a")
+	)
+	(fp_line
+		(start 1.7 -1.5)
+		(end 1.7 1.5)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ab1d4d5f-c304-4322-a901-a39f67dca4d0")
+	)
+	(fp_line
+		(start 1.7 1.5)
+		(end -1.7 1.5)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "647b0524-e470-4700-ad65-c8334aa4be19")
+	)
+	(fp_circle
+		(center 2.51 4.02)
+		(end 2.63 4.02)
+		(stroke
+			(width 0.24)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "8dbaae0e-2da3-4ef0-9902-82f65abd55ff")
+	)
+	(pad "1" smd rect
+		(at -2.5 0)
+		(size 1.4 2.6)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "d58ab57b-6fb8-4d32-9f1a-b042d03560a7")
+	)
+	(pad "2" smd rect
+		(at 2.5 0)
+		(size 1.4 2.6)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "892c1aaa-1722-49bd-87b1-97ec3b6a6f88")
+	)
+	(model "${KIPRJMOD}/badge_pwnCon.pretty/3D/LYT77K-K2M1.step"
+		(offset
+			(xyz 0 0 1.1)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 0)
+		)
+	)
 )
