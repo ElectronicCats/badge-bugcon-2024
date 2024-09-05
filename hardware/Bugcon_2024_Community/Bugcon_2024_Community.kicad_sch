@@ -4,6 +4,13 @@
 	(generator_version "8.0")
 	(uuid "0b1ea3a7-daf5-4c35-8d49-132d5fce1685")
 	(paper "A4")
+	(title_block
+		(title "Bugcon_2024_Community")
+		(date "2024-09-05")
+		(rev "v1.0")
+		(company "Electronic Cats")
+		(comment 1 "Lizeth Gallegos Martínez")
+	)
 	(lib_symbols
 		(symbol "Connector:Screw_Terminal_01x02"
 			(pin_names

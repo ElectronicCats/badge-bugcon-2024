@@ -7,6 +7,13 @@
 		(legacy_teardrops no)
 	)
 	(paper "A4")
+	(title_block
+		(title "Bugcon_2024_Community")
+		(date "2024-09-05")
+		(rev "v1.0")
+		(company "Electronic Cats")
+		(comment 1 "Lizeth Gallegos Martínez")
+	)
 	(layers
 		(0 "F.Cu" signal)
 		(31 "B.Cu" signal)
@@ -13669,7 +13676,7 @@
 		)
 		(fp_arc
 			(start -2.5 3.299998)
-			(mid -2.449999 3.250007)
+			(mid -2.45 3.250009)
 			(end -2.399999 3.3)
 			(stroke
 				(width 0.2)
@@ -13680,7 +13687,7 @@
 		)
 		(fp_arc
 			(start -2.5 3.299998)
-			(mid -2.449999 3.250007)
+			(mid -2.45 3.250009)
 			(end -2.399999 3.3)
 			(stroke
 				(width 0.2)
