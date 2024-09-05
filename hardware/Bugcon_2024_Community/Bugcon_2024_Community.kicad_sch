@@ -6539,7 +6539,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "Display OLED 128Ã—32 0.91 I2C SSD1306 Blanco / Azul"
+		(property "manf#" "Display OLED 128x32 0.91 I2C SSD1306 Blanco / Azul"
 			(at 115.57 123.19 0)
 			(effects
 				(font
@@ -8310,7 +8310,7 @@
 				)
 			)
 		)
-		(property "Value" "AP2112K-3.3"
+		(property "Value" "XC6220B331MR-G"
 			(at 56.261 171.8056 0)
 			(effects
 				(font
@@ -8345,7 +8345,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "AP2112K3.3TRG"
+		(property "manf#" "XC6220B331MR-G "
 			(at 56.261 178.181 0)
 			(effects
 				(font
@@ -8363,7 +8363,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C51118"
+		(property "LCSC#" "C86534"
 			(at 56.261 178.181 0)
 			(effects
 				(font
