@@ -7573,7 +7573,7 @@
 				(hide yes)
 			)
 		)
-		(property "Proveedor" "JLCPCB"
+		(property "Proveedor" ""
 			(at 192.151 68.326 0)
 			(effects
 				(font
@@ -8150,7 +8150,7 @@
 				(hide yes)
 			)
 		)
-		(property "Proveedor" "JLCPCB"
+		(property "Proveedor" ""
 			(at 193.294 55.118 0)
 			(effects
 				(font
@@ -8236,7 +8236,7 @@
 				(hide yes)
 			)
 		)
-		(property "Proveedor" "JLCPCB"
+		(property "Proveedor" ""
 			(at 259.08 64.516 0)
 			(effects
 				(font
@@ -8349,7 +8349,7 @@
 				(hide yes)
 			)
 		)
-		(property "Proveedor" "JLCPCB"
+		(property "Proveedor" ""
 			(at 193.294 52.578 0)
 			(effects
 				(font
@@ -8452,7 +8452,7 @@
 				(hide yes)
 			)
 		)
-		(property "Proveedor" "JLCPCB"
+		(property "Proveedor" ""
 			(at 150.622 47.498 0)
 			(effects
 				(font
@@ -8595,6 +8595,15 @@
 			)
 		)
 		(property "manf#" "AAA3528RBGS/08-09 "
+			(at 207.01 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Proveedor" "MOUSER"
 			(at 207.01 123.19 0)
 			(effects
 				(font
@@ -8768,7 +8777,7 @@
 				(hide yes)
 			)
 		)
-		(property "Proveedor" "JLCPCB"
+		(property "Proveedor" ""
 			(at 151.892 42.418 0)
 			(effects
 				(font
@@ -8845,6 +8854,15 @@
 			)
 		)
 		(property "manf#" "AAA3528RBGS/08-09 "
+			(at 265.43 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Proveedor" "MOUSER"
 			(at 265.43 133.35 0)
 			(effects
 				(font
@@ -9021,7 +9039,7 @@
 				(hide yes)
 			)
 		)
-		(property "Proveedor" "JLCPCB"
+		(property "Proveedor" ""
 			(at 41.783 179.451 0)
 			(effects
 				(font
@@ -9259,6 +9277,15 @@
 				(hide yes)
 			)
 		)
+		(property "Proveedor" "MOUSER"
+			(at 265.43 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "3"
 			(uuid "000a8693-c8d1-45fb-a2ad-057c773a2ac3")
 		)
@@ -9418,7 +9445,7 @@
 				(hide yes)
 			)
 		)
-		(property "Proveedor" "JLCPCB"
+		(property "Proveedor" ""
 			(at 82.804 66.167 0)
 			(effects
 				(font
@@ -9569,7 +9596,7 @@
 				(hide yes)
 			)
 		)
-		(property "Proveedor" "JLCPCB"
+		(property "Proveedor" ""
 			(at 259.08 48.006 0)
 			(effects
 				(font
@@ -9664,7 +9691,7 @@
 				(hide yes)
 			)
 		)
-		(property "Proveedor" "JLCPCB"
+		(property "Proveedor" ""
 			(at 64.77 121.92 0)
 			(effects
 				(font
@@ -9831,6 +9858,24 @@
 				(hide yes)
 			)
 		)
+		(property "Proveedor" "UNIT"
+			(at 143.51 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" "GC9A01 Pantalla TFT LCD Circular 1.28 Pulgadas"
+			(at 143.51 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "3"
 			(uuid "4af6ba2f-8a00-4cf6-8dbc-cb25d63c2ff5")
 		)
@@ -9933,7 +9978,7 @@
 				(hide yes)
 			)
 		)
-		(property "Proveedor" "JLCPCB"
+		(property "Proveedor" ""
 			(at 91.694 66.548 0)
 			(effects
 				(font
@@ -10245,7 +10290,7 @@
 				(hide yes)
 			)
 		)
-		(property "Proveedor" "JLCPCB"
+		(property "Proveedor" ""
 			(at 146.304 180.848 0)
 			(effects
 				(font
@@ -10426,7 +10471,7 @@
 				(hide yes)
 			)
 		)
-		(property "Proveedor" "JLCPCB"
+		(property "Proveedor" ""
 			(at 258.826 44.45 0)
 			(effects
 				(font
@@ -10588,7 +10633,7 @@
 				(hide yes)
 			)
 		)
-		(property "Proveedor" "JLCPCB"
+		(property "Proveedor" ""
 			(at 100.584 66.548 0)
 			(effects
 				(font
@@ -10759,7 +10804,7 @@
 				(hide yes)
 			)
 		)
-		(property "Proveedor" "JLCPCB"
+		(property "Proveedor" ""
 			(at 258.826 24.13 0)
 			(effects
 				(font
@@ -11014,7 +11059,7 @@
 				(hide yes)
 			)
 		)
-		(property "Proveedor" "JLCPCB"
+		(property "Proveedor" ""
 			(at 131.064 57.658 0)
 			(effects
 				(font
@@ -11152,7 +11197,7 @@
 				(hide yes)
 			)
 		)
-		(property "Proveedor" "JLCPCB"
+		(property "Proveedor" ""
 			(at 77.47 181.61 0)
 			(effects
 				(font
@@ -11396,7 +11441,7 @@
 				(hide yes)
 			)
 		)
-		(property "Proveedor" "JLCPCB"
+		(property "Proveedor" ""
 			(at 21.844 61.214 0)
 			(effects
 				(font
@@ -11499,7 +11544,7 @@
 				(hide yes)
 			)
 		)
-		(property "Proveedor" "JLCPCB"
+		(property "Proveedor" ""
 			(at 97.79 174.879 0)
 			(effects
 				(font
@@ -11577,6 +11622,15 @@
 			)
 		)
 		(property "manf#" "AAA3528RBGS/08-09 "
+			(at 207.01 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Proveedor" "MOUSER"
 			(at 207.01 147.32 0)
 			(effects
 				(font
@@ -12045,7 +12099,7 @@
 				(hide yes)
 			)
 		)
-		(property "Proveedor" "JLCPCB"
+		(property "Proveedor" ""
 			(at 88.138 168.529 0)
 			(effects
 				(font
@@ -12346,7 +12400,7 @@
 				(hide yes)
 			)
 		)
-		(property "Proveedor" "JLCPCB"
+		(property "Proveedor" ""
 			(at 56.515 177.419 0)
 			(effects
 				(font
@@ -12591,7 +12645,7 @@
 				(hide yes)
 			)
 		)
-		(property "Proveedor" "JLCPCB"
+		(property "Proveedor" ""
 			(at 66.167 177.419 0)
 			(effects
 				(font
@@ -12773,7 +12827,7 @@
 				(hide yes)
 			)
 		)
-		(property "Proveedor" "JLCPCB "
+		(property "Proveedor" ""
 			(at 184.404 47.498 0)
 			(effects
 				(font
@@ -12954,7 +13008,7 @@
 				(hide yes)
 			)
 		)
-		(property "Proveedor" "JLCPCB"
+		(property "Proveedor" ""
 			(at 146.304 175.641 0)
 			(effects
 				(font
@@ -13060,7 +13114,7 @@
 				(hide yes)
 			)
 		)
-		(property "Proveedor" "JLCPCB"
+		(property "Proveedor" ""
 			(at 192.024 70.358 0)
 			(effects
 				(font
@@ -13163,7 +13217,7 @@
 				(hide yes)
 			)
 		)
-		(property "Proveedor" "JLCPCB"
+		(property "Proveedor" ""
 			(at 84.455 174.879 0)
 			(effects
 				(font
@@ -13333,7 +13387,7 @@
 				(hide yes)
 			)
 		)
-		(property "Proveedor" "JLCPCB"
+		(property "Proveedor" ""
 			(at 257.556 80.01 0)
 			(effects
 				(font
@@ -13410,6 +13464,15 @@
 			)
 		)
 		(property "manf#" "AAA3528RBGS/08-09 "
+			(at 265.43 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Proveedor" "MOUSER"
 			(at 265.43 157.48 0)
 			(effects
 				(font
@@ -13642,7 +13705,7 @@
 				(hide yes)
 			)
 		)
-		(property "Proveedor" "JLCPCB"
+		(property "Proveedor" ""
 			(at 259.08 27.686 0)
 			(effects
 				(font
@@ -13754,7 +13817,7 @@
 				(hide yes)
 			)
 		)
-		(property "Proveedor" "JLCPCB"
+		(property "Proveedor" ""
 			(at 150.622 50.038 0)
 			(effects
 				(font
@@ -13840,7 +13903,7 @@
 				(hide yes)
 			)
 		)
-		(property "Proveedor" "JLCPCB"
+		(property "Proveedor" ""
 			(at 257.81 83.566 0)
 			(effects
 				(font
@@ -14084,7 +14147,7 @@
 				(hide yes)
 			)
 		)
-		(property "Proveedor" "JLCPCB"
+		(property "Proveedor" ""
 			(at 258.826 60.96 0)
 			(effects
 				(font
