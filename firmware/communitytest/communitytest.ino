@@ -39,6 +39,9 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 #define LOGO_HEIGHT   16
 #define LOGO_WIDTH    16
+
+bool buttoncheck = 0;
+
 static const unsigned char PROGMEM logo_bmp[] =
 { 0b00000000, 0b11000000,
   0b00000001, 0b11000000,
@@ -60,6 +63,11 @@ static const unsigned char PROGMEM logo_bmp[] =
 void setup() {
   Serial.begin(9600);
 
+  pinMode(18,INPUT_PULLUP);
+  pinMode(21,INPUT_PULLUP);
+  pinMode(22,INPUT_PULLUP);
+  pinMode(23,INPUT_PULLUP);
+  
   pinMode(2,OUTPUT);
   pinMode(15,OUTPUT);
   pinMode(3,OUTPUT);
@@ -135,6 +143,23 @@ void setup() {
 }
 
 void loop() {
+  if(buttoncheck == 0){
+  while(digitalRead(18) == HIGH){
+    Serial.println("Press Button LEFT");
+  }
+  while(digitalRead(21) == HIGH){
+    Serial.println("Press Button UP");
+  }
+  while(digitalRead(22) == HIGH){
+    Serial.println("Press Button DOWN");
+  }
+  while(digitalRead(23) == HIGH){
+    Serial.println("Press Button RIGHT");
+  }
+  buttoncheck=1;
+  }
+  
+  
   digitalWrite(2,LOW);
   delay(300);
   digitalWrite(2,HIGH);

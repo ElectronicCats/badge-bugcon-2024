@@ -32,6 +32,8 @@
 // reduced; it's rarely used, see header file for syntax if needed.
 Adafruit_GC9A01A tft(TFT_CS, TFT_DC);
 
+bool buttoncheck = 0;
+
 void setup() {
   Serial.begin(9600);
   Serial.println("GC9A01A Test!");
@@ -106,6 +108,22 @@ void setup() {
 }
 
 void loop(void) {
+  if(buttoncheck == 0){
+  while(digitalRead(18) == HIGH){
+    Serial.println("Press Button LEFT");
+  }
+  while(digitalRead(21) == HIGH){
+    Serial.println("Press Button UP");
+  }
+  while(digitalRead(22) == HIGH){
+    Serial.println("Press Button DOWN");
+  }
+  while(digitalRead(23) == HIGH){
+    Serial.println("Press Button RIGHT");
+  }
+  buttoncheck=1;
+  }
+  
   digitalWrite(5, LOW);   // RED
   digitalWrite(2, LOW);   // GREN
   digitalWrite(11, HIGH);   // BLUE
