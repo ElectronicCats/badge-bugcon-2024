@@ -46,7 +46,7 @@ def timer_callback(timer):
             
         last_button_states[i] = current_button_state
 
-def init():
+def keyboard_module_init():
     timer = Timer(0)
     timer.init(period=TICKS_INTERVAL, mode=Timer.PERIODIC, callback=timer_callback)
     return timer

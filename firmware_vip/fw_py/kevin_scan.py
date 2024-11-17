@@ -1,8 +1,9 @@
 from ibeacon_scan import BLEScan
 import time
-import keyboard_module
+from keyboard_module import register_button_cb
 from keyboard_module import btn
 import screennorm
+from leds import get_leds_obj
 
 import _thread
 
@@ -17,10 +18,9 @@ import romand as font1
 
 import random
 
-import main
-
 scanner = None
 rssi = 0
+exit_cb = None
 
 GREEN_DARK = const(0x01E0)
 GREEN_MEDIUM = const(0x03E0)
@@ -67,6 +67,7 @@ def draw_radar():
             tft.circle(120,120,109+i,SCANNER_COLOR)
         
         time.sleep(0.1)
+    _thread.exit()
         
 def on_kevin_found_cb(_rssi):
     global rssi
@@ -74,12 +75,11 @@ def on_kevin_found_cb(_rssi):
     
 
 def handle_input(btn_name):
-    print("key")
     if btn_name == btn.BUTTON_LEFT:
         global exit_flag
         exit_flag=True
         kevin_scan_deinit()
-        main.scene_main_menu()
+        exit_cb()
     elif btn_name == btn.BUTTON_RIGHT:
         pass
     elif btn_name == btn.BUTTON_UP:
@@ -87,16 +87,19 @@ def handle_input(btn_name):
     elif btn_name == btn.BUTTON_DOWN:
         pass
 
-def kevin_scan_init():
-    keyboard_module.register_button_cb(handle_input)
-    global scanner, rssi
+def kevin_scan_init(cb):
+    global scanner, rssi, exit_cb
+    leds_obj = get_leds_obj()
+    leds_obj.start_animation()
+    register_button_cb(handle_input)
+    exit_cb = cb
     rssi = 0
     scanner = BLEScan(on_kevin_found_cb)
     scanner.scan()
-    print("Escaneo iniciado")
     _thread.start_new_thread(draw_radar,())
-    print("Radar iniciado")
     
 def kevin_scan_deinit():
+    leds_obj = get_leds_obj()
+    leds_obj.stop_animation()
     global scanner
     scanner.deinit()

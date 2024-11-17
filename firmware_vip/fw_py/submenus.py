@@ -1,6 +1,6 @@
 import machine
 import time
-import keyboard_module
+from keyboard_module import register_button_cb
 from keyboard_module import btn
 import screennorm
 import gc9a01
@@ -14,28 +14,28 @@ import romand as font1
 
 MAX_OPTIONS_NUM = 3
 class GeneralSubMenu:
-    def __init__(self, options, select_cb, exit_cb):
+    def __init__(self, options, selected_option,select_cb, exit_cb):
         self.screen = screennorm.get_screen()
         self.options = options
         self.options_count = len(options)
-        self.selected_option = 0
+        self.selected_option = selected_option
         self.select_cb = select_cb
         self.exit_cb = exit_cb
         self.items_offset = 0
-        keyboard_module.register_button_cb(self.handle_input)
+        register_button_cb(self.handle_input)
         self.list_submenu_options()
         
     def list_submenu_options(self):                
         self.screen.clear(0)
         
         text = self.options[self.selected_option-1 if self.selected_option != 0 else self.options_count-1]
-        self.screen.text_font(font4, 40, 40, text, fg_color = gc9a01.color565(45, 217, 80), scale =0.55)
+        self.screen.text_auto_scale_center(font4, text, 40, gc9a01.color565(45, 217, 80))
         
         text = self.options[self.selected_option]
-        self.screen.text_font(font2, 5, 116, text, fg_color = gc9a01.color565(120,247,180), scale = 0.75)
+        self.screen.text_auto_scale_center(font2, text, 120,)
  
         text = self.options[self.selected_option+1 if self.selected_option != self.options_count-1 else 0]
-        self.screen.text_font(font4, 40, 240-40-8, text, fg_color = gc9a01.color565(45, 217, 80), scale =0.55)
+        self.screen.text_auto_scale_center(font4, text, 192, gc9a01.color565(45, 217, 80))
         
 
     def handle_input(self, btn_name):

@@ -3,6 +3,7 @@ from machine import Pin, SPI
 import vga1_16x32 as font
 import gc
 import romant as deffont
+import italict as font2
 import math
 
 class ScreenNorm:
@@ -49,6 +50,7 @@ class ScreenNorm:
         
         self.tft.init()
         self.tft.fill(0)
+        self.text_auto_scale_center(font2,"launching...",120)
 
     def idle(self):
         """

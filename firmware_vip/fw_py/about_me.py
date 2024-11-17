@@ -1,11 +1,9 @@
-import keyboard_module
+from keyboard_module import register_button_cb
 from keyboard_module import btn
 import screennorm
 import time
 from machine import Timer
 import random
-
-from main import scene_main_menu
 
 import romans as font6
 import romant as font5
@@ -26,6 +24,8 @@ PERIOD = 20000
 
 current_index=0
 timer=None
+
+exit_cb = None
 
 def display_name():
     screen = screennorm.get_screen()
@@ -102,7 +102,7 @@ def handle_input(btn_name):
     global timer, current_index
     if btn_name == btn.BUTTON_LEFT:
         timer.deinit()
-        scene_main_menu()
+        exit_cb()
     elif btn_name == btn.BUTTON_RIGHT:
         next_function(None)
         timer_reset()
@@ -117,16 +117,16 @@ def timer_reset():
     timer.init(period=PERIOD, mode=Timer.PERIODIC, callback=next_function)
     
 def next_function(timer):
-    global current_index
-    global display_functions
+    global current_index,display_functions
     display_functions[current_index]()
     current_index += 1
     if current_index >= len(display_functions):
         current_index = 0
           
-def init():
-    keyboard_module.register_button_cb(handle_input)
-    global timer, current_index
+def about_me_init(cb):
+    register_button_cb(handle_input)
+    global timer, current_index, exit_cb
+    exit_cb = cb
     timer = Timer(2)
     timer.init(period=PERIOD, mode=Timer.PERIODIC, callback=next_function)
     next_function(None)
