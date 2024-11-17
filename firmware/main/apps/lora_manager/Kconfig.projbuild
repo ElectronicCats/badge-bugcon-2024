@@ -1,0 +1,31 @@
+menu "Lora Configuration"
+  config LORA_NSS_PIN
+      int "Pin"
+      default 0
+      help
+          Pin number to which the NSS pin of the LoRa module is connected.
+  
+  config LORA_RST_PIN
+      int "Pin"
+      default 1
+      help
+            Pin number to which the RST pin of the LoRa module is connected.
+
+    config LORA_DIO0_PIN
+        int "Pin"
+        default 5
+        help
+                Pin number to which the DIO0 pin of the LoRa module is connected.
+    
+    config LORA_DIO1_PIN
+        int "Pin"
+        default 2
+        help
+                Pin number to which the DIO1 pin of the LoRa module is connected.
+
+    config LORA_DIO2_PIN
+        int "Pin"
+        default 4
+        help
+                Pin number to which the DIO2 pin of the LoRa module is connected.
+endmenu

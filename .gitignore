@@ -29,3 +29,14 @@ hardware/**/*.csv
 hardware/Template-KiCAD-Project-CI-backups/
 
 *.zip
+
+build/
+.DS_Store
+/**/managed_components/
+.vscode/c_cpp_properties.json
+firmware/sdkconfig
+.vscode/settings.json
+firmware/dependencies.lock
+firmware/sdkconfig.old
+.vscode/**
+*.kicad_sch.lck

@@ -1,0 +1,19 @@
+#pragma once
+
+#define LORA_PIN_MISO CONFIG_LORA_MISO_PIN
+#define LORA_PIN_MOSI CONFIG_LORA_MOSI_PIN
+#define LORA_PIN_SCK  CONFIG_LORA_SCK_PIN
+#define LORA_PIN_DIO0 CONFIG_LORA_DIO0_PIN
+#define LORA_PIN_DIO1 CONFIG_LORA_DIO1_PIN
+#define LORA_PIN_DIO2 CONFIG_LORA_DIO2_PIN
+#define LORA_PIN_NSS  CONFIG_LORA_NSS_PIN
+#define LORA_PIN_RST  CONFIG_LORA_RST_PIN
+
+#define LORA_PACKET_LENGTH 254
+
+#define LORA_AT_CMD_PLAY   "AT+PLAY"
+#define LORA_AT_CMD_STOP   "AT+STOP"
+#define LORA_AT_CMD_NOTIFY "AT+NOTIFY"
+
+void lora_module_begin();
+void lora_manager_alert_scrolling(char* message);
