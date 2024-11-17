@@ -112,7 +112,7 @@ void save_badge_info(badge_connect_recv_msg_t* msg) {
     }
   }
 
-  if (!badge_already_found || true) {
+  if (!badge_already_found) {
     badge_info_list[found_badges_count] = badge_info;
     preferences_put_bytes("badges_list", (void*) &badge_info_list,
                           sizeof(badge_info_list));
