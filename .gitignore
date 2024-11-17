@@ -28,15 +28,20 @@ hardware/**/*.csv
 
 hardware/Template-KiCAD-Project-CI-backups/
 
-*.zip
+# Visual Studio config files
+.vscode/
 
-build/
-.DS_Store
+# macOS folder attributes
+/**/.DS_Store
+
+# Firmware binaries
+/**/build/
+/**/build-ota/
+/**/build-noota/
 /**/managed_components/
-.vscode/c_cpp_properties.json
-firmware/sdkconfig
-.vscode/settings.json
-firmware/dependencies.lock
-firmware/sdkconfig.old
-.vscode/**
-*.kicad_sch.lck
+/**/minino-*.zip
+
+# IDF sdkconfig
+/**/sdkconfig
+/**/sdkconfig.old
+/**/dependencies.lock
