@@ -22,8 +22,6 @@ static char* about_credits_text[] = {
     "  @otrebor_671",
     "- Francisco",
     "  @deimoshall",
-    "- David",
-    "  @dcuartielles",
     "- Edgar",
     "  Capuchino",
     "and Electronic",
@@ -60,7 +58,7 @@ void about_module_display_legal_menu() {
 }
 
 void about_module_display_version() {
-  general_screen_display_card_information_handler("EKO badge", "2024",
+  general_screen_display_card_information_handler("BugCON badge", "2024",
                                                   menus_module_exit_app, NULL);
 }
 void about_module_display_license() {

@@ -12,7 +12,6 @@
 #include "gps_module.h"
 #include "gps_screens.h"
 #include "hid_module.h"
-#include "llamaneitor_scenes.h"
 #include "open_thread_module.h"
 #include "ota_module.h"
 #include "sd_card_settings_module.h"
@@ -450,13 +449,6 @@ menu_t menus[] = {  //////////////////////////////////
      .on_exit_cb = NULL,
      .is_visible = true},
 #endif
-    {.display_name = "Llamaneitor",
-     .menu_idx = MENU_SBATTERY,
-     .parent_idx = MENU_APPLICATIONS,
-     .last_selected_submenu = 0,
-     .on_enter_cb = llamaneitor_scenes_main_menu,
-     .on_exit_cb = NULL,
-     .is_visible = true},
     {.display_name = "Encontrar",
      .menu_idx = MENU_BADGE_FINDER,
      .parent_idx = MENU_APPLICATIONS,
