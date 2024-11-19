@@ -2,7 +2,7 @@
 
 # This script is used to get the build files needed to flash the badge using the esptool.py script.
 
-PROJECT_NAME="minino"
+PROJECT_NAME="bugcon"
 CONFIG_FILE="sdkconfig"
 
 project_version=$(grep '^CONFIG_PROJECT_VERSION=' "$CONFIG_FILE" | cut -d'=' -f2 | tr -d '"')
