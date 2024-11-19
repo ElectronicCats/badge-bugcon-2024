@@ -2,7 +2,9 @@
 #include <string.h>
 #include "arm_wrestling_game.h"
 #include "games_bitmaps.h"
+#include "general_screens.h"
 #include "lobby_manager.h"
+#include "menus_module.h"
 #include "oled_screen.h"
 #include "rope_game.h"
 #include "speed_bag_game.h"
@@ -11,6 +13,135 @@
 #define BAR_WIDTH  64
 
 uint8_t bar_bitmap[BAR_HEIGHT][BAR_WIDTH / 8];
+
+static const char* games_main_help_text[] = {
+    /***************/
+    "Abre el menu",
+    "SALA, luego",
+    "conecta badges",
+    "de bsides como",
+    "se indica para",
+    "poder jugar.",
+    "El juego",
+    "dependera del",
+    "numero de",
+    "badges.",
+    "",
+    "El modo host",
+    "muestra a",
+    "los jugadores",
+    "conectados",
+    "y el juego",
+    "seleccionado.",
+    "Presiona el ",
+    "boton (DERECHA)",
+    "para comenzar",
+    "el juego.",
+    "",
+    "El modo cliente",
+    "muestra el ID",
+    "de tu jugador",
+    "y el juego",
+    "seleccionado.",
+    "Solo el host",
+    "puede comenzar",
+    "la partida.",
+    "",
+    "Una vez que",
+    "comienza el",
+    "juego, ya pueden",
+    "separar los",
+    "badges y jugar.",
+};
+
+char* raul_game_help_text[] = {
+    /***************/
+    "** COMO JUGAR **",
+    "--- Vencidas ---",
+    " (2 Jugadores) ",
+    "",
+    "Presiona boton",
+    "(Derecha) una",
+    "vez, luego",
+    "(Arriba) una",
+    "vez.",
+    "Repite tan",
+    "rapido como",
+    "puedas para",
+    "ser mas fuerte",
+    "que tu",
+    "oponente.",
+    NULL,
+};
+
+char* rope_game_help_text[] = {
+    /***************/
+    "** COMO JUGAR **",
+    "---- CUERDA ----",
+    " (4 Jugadores) ",
+    "",
+    "Jugadores 1 & 2",
+    "son EQUIPO 1, de",
+    "color amarillo.",
+    "Jugadores 3 & 4 ",
+    "son EQUIPO 2, de",
+    "color azul.",
+    "",
+    "Presiona boton",
+    "(Derecha) una",
+    "vez, luego",
+    "(Arriba) una",
+    "vez.",
+    "Repite tan",
+    "rapido como",
+    "puedas para",
+    "ser mas fuerte",
+    "que tus",
+    "oponentes.",
+    "",
+    "Si presionas",
+    "doble o lento,",
+    "tu fuerza",
+    "disminuira.",
+    NULL,
+};
+
+char* kevin_game_help_text[] = {
+    /***************/
+    "* Como jugar *",
+    "--Juego Peras--",
+    " (5 jugadores) ",
+    "",
+    "Presiona Derecha.",
+    "Y luego Arriba.",
+    "Repite lo mas",
+    "rapido que",
+    "puedas para",
+    "golpear mas",
+    "veces que tus "
+    "oponentes.",
+    NULL,
+};
+
+const general_menu_t games_main_help_menu = {
+    .menu_count = 36,
+    .menu_items = games_main_help_text,
+    .menu_level = GENERAL_TREE_APP_MENU};
+
+const general_menu_t raul_game_help_menu = {
+    .menu_count = 14,
+    .menu_items = raul_game_help_text,
+    .menu_level = GENERAL_TREE_APP_MENU};
+
+const general_menu_t rope_game_help_menu = {
+    .menu_count = 26,
+    .menu_items = rope_game_help_text,
+    .menu_level = GENERAL_TREE_APP_MENU};
+
+const general_menu_t kevin_game_help_menu = {
+    .menu_count = 14,
+    .menu_items = kevin_game_help_text,
+    .menu_level = GENERAL_TREE_APP_MENU};
 
 void show_host_state() {}
 
@@ -409,6 +540,26 @@ void games_screens_module_show_speed_bag_game_event(
     default:
       break;
   }
+}
+
+void games_screens_module_show_help() {
+  general_register_scrolling_menu(&games_main_help_menu);
+  general_screen_display_scrolling_text_handler(menus_module_exit_app);
+}
+
+void games_screens_module_show_raul_game_help() {
+  general_register_scrolling_menu(&raul_game_help_menu);
+  general_screen_display_scrolling_text_handler(menus_module_exit_app);
+}
+
+void games_screens_module_show_rope_game_help() {
+  general_register_scrolling_menu(&rope_game_help_menu);
+  general_screen_display_scrolling_text_handler(menus_module_exit_app);
+}
+
+void games_screens_module_show_kevin_game_help() {
+  general_register_scrolling_menu(&kevin_game_help_menu);
+  general_screen_display_scrolling_text_handler(menus_module_exit_app);
 }
 
 //////////////////////////////////////////////////////////////////////////////////

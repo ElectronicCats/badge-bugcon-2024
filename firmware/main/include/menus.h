@@ -10,6 +10,7 @@
 #include "display_settings.h"
 #include "file_manager_module.h"
 #include "games_module.h"
+#include "games_screens_module.h"
 #include "gps_module.h"
 #include "gps_screens.h"
 #include "hid_module.h"
@@ -484,28 +485,28 @@ menu_t menus[] = {  //////////////////////////////////
      .menu_idx = MENU_GAMES_MAIN_HELP,
      .parent_idx = MENU_GAMES_HELP,
      .last_selected_submenu = 0,
-     .on_enter_cb = NULL,
+     .on_enter_cb = games_screens_module_show_help,
      .on_exit_cb = NULL,
      .is_visible = true},
     {.display_name = "Vencidas?",
      .menu_idx = MENU_RAUL_GAME_HELP,
      .parent_idx = MENU_GAMES_HELP,
      .last_selected_submenu = 0,
-     .on_enter_cb = NULL,
+     .on_enter_cb = games_screens_module_show_raul_game_help,
      .on_exit_cb = NULL,
      .is_visible = true},
     {.display_name = "Cuerda?",
      .menu_idx = MENU_ROPE_GAME_HELP,
      .parent_idx = MENU_GAMES_HELP,
      .last_selected_submenu = 0,
-     .on_enter_cb = NULL,
+     .on_enter_cb = games_screens_module_show_rope_game_help,
      .on_exit_cb = NULL,
      .is_visible = true},
     {.display_name = "Peras?",
      .menu_idx = MENU_KEVIN_GAME_HELP,
      .parent_idx = MENU_GAMES_HELP,
      .last_selected_submenu = 0,
-     .on_enter_cb = NULL,
+     .on_enter_cb = games_screens_module_show_kevin_game_help,
      .on_exit_cb = NULL,
      .is_visible = true},
     {.display_name = "Encontrar",

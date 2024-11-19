@@ -45,6 +45,7 @@ void open_game(uint8_t game_id) {
       break;
   }
 }
+
 void send_start_game_cmd() {
   if (client_mode)
     return;

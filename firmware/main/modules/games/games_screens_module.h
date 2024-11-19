@@ -15,3 +15,7 @@ void games_screens_module_show_speed_bag_game_event(
     speed_bag_speed_bag_game_events_t event);
 void games_screens_module_show_arm_wrestling_game_event(
     arm_wrestling_events_t event);
+void games_screens_module_show_help();
+void games_screens_module_show_raul_game_help();
+void games_screens_module_show_rope_game_help();
+void games_screens_module_show_kevin_game_help();
