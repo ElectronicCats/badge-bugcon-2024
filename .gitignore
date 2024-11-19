@@ -39,7 +39,7 @@ hardware/Template-KiCAD-Project-CI-backups/
 /**/build-ota/
 /**/build-noota/
 /**/managed_components/
-/**/minino-*.zip
+/**/*.zip
 
 # IDF sdkconfig
 /**/sdkconfig
