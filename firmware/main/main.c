@@ -6,6 +6,7 @@
 #include "buzzer.h"
 #include "cat_console.h"
 #include "esp_log.h"
+#include "esp_random.h"
 #include "esp_timer.h"
 #include "flash_fs.h"
 #include "flash_fs_screens.h"
@@ -38,15 +39,10 @@
 
 static const char* TAG = "main";
 
-void app_main() {
-#if !defined(CONFIG_MAIN_DEBUG)
-  esp_log_level_set(TAG, ESP_LOG_NONE);
-#endif
-  preferences_begin();
-  if (preferences_get_int("dp_select", 0) == 0) {
-    preferences_put_int("dp_select", 6);
-  }
-
+/**
+ * @brief Task that generates random colors and sets them to the RGB LEDs
+ */
+void random_colors_task() {
   // Create an instance of the RGB LED structure and initialize it with the
   // defined GPIO pins and LEDC channels
   rgb_led_t led1 =
@@ -72,6 +68,34 @@ void app_main() {
   }
   rgb_led_set_color(&led2, NO_COLOR);
 
+  while (1) {
+    for (uint8_t i = 0; i < 20; i++) {
+      // Color must be in format 0xRRGGBB
+      uint8_t color1 = esp_random();
+      uint8_t color2 = esp_random();
+      uint8_t color3 = esp_random();
+      uint32_t color_led1 = (color1 << 16) | (color2 << 8) | color3;
+      uint32_t color_led2 = (color3 << 16) | (color2 << 8) | color1;
+
+      rgb_led_set_color(&led1, color_led1);
+      rgb_led_set_color(&led2, color_led1);
+      vTaskDelay(pdMS_TO_TICKS(500));
+    }
+    rgb_led_set_color(&led1, NO_COLOR);
+    rgb_led_set_color(&led2, NO_COLOR);
+    vTaskDelay(pdMS_TO_TICKS(1000 * 60 * 5));  // 5 minutes
+  }
+}
+
+void app_main() {
+#if !defined(CONFIG_MAIN_DEBUG)
+  esp_log_level_set(TAG, ESP_LOG_NONE);
+#endif
+  preferences_begin();
+  if (preferences_get_int("dp_select", 0) == 0) {
+    preferences_put_int("dp_select", 6);
+  }
+
   // flash_fs_begin(flash_fs_screens_handler);
   // sd_card_begin();
   keyboard_module_begin();
@@ -79,6 +103,8 @@ void app_main() {
   if (!preferences_get_int("flogin", 0)) {
     screen_saver_stop();
   }
+
+  xTaskCreate(random_colors_task, "random_colors_task", 2048, NULL, 1, NULL);
 
   // adv_scanner_module_begin();
   // Always start the console at the end
