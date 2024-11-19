@@ -69,6 +69,7 @@ void random_colors_task() {
   rgb_led_set_color(&led2, NO_COLOR);
 
   while (1) {
+    vTaskDelay(pdMS_TO_TICKS(1000 * 60 * 5));  // 5 minutes
     for (uint8_t i = 0; i < 20; i++) {
       // Color must be in format 0xRRGGBB
       uint8_t color1 = esp_random();
@@ -83,7 +84,6 @@ void random_colors_task() {
     }
     rgb_led_set_color(&led1, NO_COLOR);
     rgb_led_set_color(&led2, NO_COLOR);
-    vTaskDelay(pdMS_TO_TICKS(1000 * 60 * 5));  // 5 minutes
   }
 }
 
@@ -92,8 +92,9 @@ void app_main() {
   esp_log_level_set(TAG, ESP_LOG_NONE);
 #endif
   preferences_begin();
+  // preferences_clear();
   if (preferences_get_int("dp_select", 0) == 0) {
-    preferences_put_int("dp_select", 6);
+    preferences_put_int("dp_select", 9);
   }
 
   // flash_fs_begin(flash_fs_screens_handler);
