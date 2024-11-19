@@ -9,7 +9,7 @@
 #define MAX_PLAYERS_NUM 5
 #define PING_TIMEOUT_MS 90
 #define PING_ATTEMPTS   5
-#define RSSI_FILTER     (-100)
+#define RSSI_FILTER     (-50)
 
 /**
  * @brief GPIOs for badge connection

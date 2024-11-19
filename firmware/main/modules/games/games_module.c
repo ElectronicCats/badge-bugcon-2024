@@ -93,9 +93,6 @@ void handle_games_module_cmds(badge_connect_recv_msg_t* msg) {
 }
 
 void games_module_state_machine(uint8_t button_name, uint8_t button_event) {
-  // uint8_t button_name = button_pressed >> 4;
-  // uint8_t button_event = button_pressed & 0x0F;
-
   ESP_LOGI(TAG_GAMES_MODULE, "Games engine state machine from team: %d %d",
            button_name, button_event);
   switch (button_name) {
