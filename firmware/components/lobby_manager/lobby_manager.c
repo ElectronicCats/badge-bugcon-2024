@@ -244,10 +244,10 @@ void clear_client(uint8_t player_id) {
 
 ////////////////////////////////////////////////////////////////////////////////////////
 void send_advertise() {
-  if (BADGE_UNCONNECTED) {
-    clear_players_table();
-    return;
-  }
+  // if (BADGE_UNCONNECTED) {
+  //   clear_players_table();
+  //   return;
+  // }
   printf("send_advertise\t MAC:");
   print_mac_address(my_mac);
   printf("\n");
@@ -426,7 +426,8 @@ void receive_data_cb(badge_connect_recv_msg_t* msg) {
   // printf("CMD: %d\n", cmd);
   // printf("RSSI: %d\n", msg->rx_ctrl->rssi);
   if (cmd < 10) {
-    if (msg->rx_ctrl->rssi < RSSI_FILTER || BADGE_UNCONNECTED) {
+    // if (msg->rx_ctrl->rssi < RSSI_FILTER || BADGE_UNCONNECTED) {
+    if (msg->rx_ctrl->rssi < RSSI_FILTER) {
       // display_state(SHOW_UNCONNECTED);
       ESP_LOGE("UNCONNECTED", "CMD: %d SKIPPED\n", cmd);
       return;

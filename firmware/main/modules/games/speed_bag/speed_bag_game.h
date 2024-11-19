@@ -56,6 +56,6 @@ speed_bag_game_data_t speed_bag_game_instance;
 uint8_t speed_bag_player_id;
 
 void speed_bag_game_init();
-void speed_bag_game_input(button_event_t button_pressed);
+void speed_bag_game_input(uint8_t button_name, uint8_t button_event);
 
 #endif  // SPEED_BAG_GAME_H

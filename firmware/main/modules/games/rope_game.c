@@ -291,9 +291,7 @@ static void rope_game_exit() {
 
 // ///////////////////////////////////////////////////////////////////////////////
 
-void rope_game_input(button_event_t button_pressed) {
-  uint8_t button_name = (((button_event_t) button_pressed) >> 4);
-  uint8_t button_event = ((button_event_t) button_pressed) & 0x0F;
+void rope_game_input(uint8_t button_name, uint8_t button_event) {
   if (button_event != BUTTON_PRESS_DOWN)
     return;
   switch (button_name) {

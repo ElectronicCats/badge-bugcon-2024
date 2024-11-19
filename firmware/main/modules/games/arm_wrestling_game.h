@@ -48,6 +48,6 @@ wgame_data_t wgame_instance;
 extern uint8_t arm_wrestling_player_id;
 
 void arm_wrestling_init();
-void arm_wrestling_input(button_event_t button_pressed);
+void arm_wrestling_input(uint8_t button_name, uint8_t button_event);
 
 #endif  // ARM_WRESTLING_H
