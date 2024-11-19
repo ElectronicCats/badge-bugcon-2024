@@ -9,6 +9,7 @@
 #include "deauth_module.h"
 #include "display_settings.h"
 #include "file_manager_module.h"
+#include "games_module.h"
 #include "gps_module.h"
 #include "gps_screens.h"
 #include "hid_module.h"
@@ -36,6 +37,7 @@ typedef enum {
   MENU_ZIGBEE_APPS,
   MENU_THREAD_APPS,
   MENU_GPS,
+  MENU_GAMES,
   MENU_BADGE_FINDER,
   MENU_SBATTERY,
   /* WiFi applications */
@@ -68,6 +70,14 @@ typedef enum {
   MENU_THREAD_SNIFFER,
   /* Thread Sniffer App */
   MENU_THREAD_SNIFFER_RUN,
+  /* Games module */
+  MENU_GAMES_PLAY,
+  MENU_GAMES_HELP,
+  /* Games HELP */
+  MENU_GAMES_MAIN_HELP,
+  MENU_RAUL_GAME_HELP,
+  MENU_ROPE_GAME_HELP,
+  MENU_KEVIN_GAME_HELP,
   /* GPS applications */
   MENU_GPS_WARDRIVING,
   MENU_GPS_DATE_TIME,
@@ -449,6 +459,55 @@ menu_t menus[] = {  //////////////////////////////////
      .on_exit_cb = NULL,
      .is_visible = true},
 #endif
+    {.display_name = "Juegos",
+     .menu_idx = MENU_GAMES,
+     .parent_idx = MENU_APPLICATIONS,
+     .last_selected_submenu = 0,
+     .on_enter_cb = NULL,
+     .on_exit_cb = NULL,
+     .is_visible = true},
+    {.display_name = "Sala",
+     .menu_idx = MENU_GAMES_PLAY,
+     .parent_idx = MENU_GAMES,
+     .last_selected_submenu = 0,
+     .on_enter_cb = games_module_begin,
+     .on_exit_cb = NULL,
+     .is_visible = true},
+    {.display_name = "Ayuda",
+     .menu_idx = MENU_GAMES_HELP,
+     .parent_idx = MENU_GAMES,
+     .last_selected_submenu = 0,
+     .on_enter_cb = NULL,
+     .on_exit_cb = NULL,
+     .is_visible = true},
+    {.display_name = "Sala?",
+     .menu_idx = MENU_GAMES_MAIN_HELP,
+     .parent_idx = MENU_GAMES_HELP,
+     .last_selected_submenu = 0,
+     .on_enter_cb = NULL,
+     .on_exit_cb = NULL,
+     .is_visible = true},
+    {.display_name = "Vencidas?",
+     .menu_idx = MENU_RAUL_GAME_HELP,
+     .parent_idx = MENU_GAMES_HELP,
+     .last_selected_submenu = 0,
+     .on_enter_cb = NULL,
+     .on_exit_cb = NULL,
+     .is_visible = true},
+    {.display_name = "Cuerda?",
+     .menu_idx = MENU_ROPE_GAME_HELP,
+     .parent_idx = MENU_GAMES_HELP,
+     .last_selected_submenu = 0,
+     .on_enter_cb = NULL,
+     .on_exit_cb = NULL,
+     .is_visible = true},
+    {.display_name = "Peras?",
+     .menu_idx = MENU_KEVIN_GAME_HELP,
+     .parent_idx = MENU_GAMES_HELP,
+     .last_selected_submenu = 0,
+     .on_enter_cb = NULL,
+     .on_exit_cb = NULL,
+     .is_visible = true},
     {.display_name = "Encontrar",
      .menu_idx = MENU_BADGE_FINDER,
      .parent_idx = MENU_APPLICATIONS,
