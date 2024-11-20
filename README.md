@@ -11,7 +11,7 @@ Badge Oficial BugCON 2024
 ## Tecnologia
 
 - ESP32C6
-- Baterias 2 x AAA
+- Baterias 2 x AA
 - USB C
 
 ## How to build the firmware
