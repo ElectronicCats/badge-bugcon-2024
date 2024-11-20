@@ -1,0 +1,19 @@
+menu "NEOPIXELS Configuration"
+  config NEOPIXELS_ENABLED
+      bool "Enable NeoPixels"
+      default y
+      help
+          Enable NeoPixels support.
+
+  config NEOPIXELS_PIN
+      int "Pin"
+      default 0
+      help
+          Pin number to which the NeoPixels are connected.
+  
+  config NEOPIXELS_NUM
+      int "Number of NeoPixels"
+      default 1
+      help
+          Number of NeoPixels connected.
+endmenu

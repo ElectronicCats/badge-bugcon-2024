@@ -1,0 +1,6 @@
+[submodule "firmware/components/badge_connect"]
+	path = firmware/components/badge_connect
+	url = https://github.com/ElectronicCats/badge_connect_bin.git
+[submodule "firmware/components/rgb-ledc-controller"]
+	path = firmware/components/rgb-ledc-controller
+	url = https://github.com/mdb80/rgb-ledc-controller.git
