@@ -10,17 +10,34 @@ Badge Oficial BugCON 2024
 
 ## Tecnologia
 
+### Community
 - ESP32C6
 - Baterias 2 x AA
-- USB C
+- USB
+- OLED 128×32 0.91 I2C SSD1306
+- LEDS
 
-## How to build the firmware
+### VIP
+- ESP32C6
+- Baterias 2 x AA
+- USB
+- GC9A01 Display TFT LCD Circular 1.28"
+- LEDS
+
+## How to build the firmware Community
 
 Check the [Developer guide](./firmware/README.md) to learn how to build the firmware from scratch.
+
+## How to build the firmware VIP
+
+Check the [Developer guide CircuitPython](https://learn.adafruit.com/welcome-to-circuitpython/overview) to learn how to build the firmware from scratch.
+
+Recommended development IDE [Thommy](https://thonny.org/)
 
 ## Gratitude
 Do you want to say thank you? Tag these companies on social networks and show them your badge, thanks to them it is possible
 
+- [BugCON Team](https://www.bugcon.org/)
 - [ElectronicCats](https://electroniccats.com/)
 
 ## License
