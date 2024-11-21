@@ -1,0 +1,3 @@
+Adafruit CircuitPython 9.2.0 on 2024-10-28; ESP32-C6-DevKitM-1 with ESP32-C6N4
+Board ID:espressif_esp32c6_devkitm_1_n4
+UID:0F5FDBE1C3CC
