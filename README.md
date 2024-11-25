@@ -32,7 +32,7 @@ Check the [Developer guide](./firmware/README.md) to learn how to build the firm
 
 Check the [Developer guide CircuitPython](https://learn.adafruit.com/welcome-to-circuitpython/overview) to learn how to build the firmware from scratch.
 
-Recommended development IDE [Thommy](https://thonny.org/)
+Recommended development IDE [Thonny](https://thonny.org/)
 
 ## Gratitude
 Do you want to say thank you? Tag these companies on social networks and show them your badge, thanks to them it is possible
